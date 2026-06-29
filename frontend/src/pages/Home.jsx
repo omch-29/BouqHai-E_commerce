@@ -32,7 +32,7 @@ const Home = () => {
       {!search && (
         <section className="hero">
           <div className="container hero-inner">
-            <span className="eyebrow">Hand-tied, same-day in your city</span>
+            <span className="eyebrow">Hand-tied in your city</span>
             <h1>
               Bouquets that say it <em>before</em> you do.
             </h1>
@@ -75,7 +75,7 @@ const Home = () => {
         </div>
 
         {loading ? (
-          <p className="empty-state">Gathering fresh stems…</p>
+          <p className="empty-state">Gathering fresh items…</p>
         ) : products.length === 0 ? (
           <div className="empty-state">
             <h3>No bouquets match that yet</h3>
