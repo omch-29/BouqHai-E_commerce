@@ -93,24 +93,59 @@ const AdminOrders = () => {
                       </select>
                     </td>
                   </tr>
-                  {expanded === o._id && (
-                    <tr>
-                      <td colSpan={6} style={{ background: "var(--paper-deep)" }}>
-                        {/* <strong>Items:</strong>{" "}
-                        {o.items
-                          .map((i) => `${i.name} × ${i.quantity}${i.customization ? ` (note: "${i.customization}")` : ""}`)
-                          .join(", ")} */}
-                          <strong>Items:</strong>
+                {expanded === o._id && (
+  <tr>
+    <td colSpan={6} style={{ background: "var(--paper-deep)", padding: "16px" }}>
+      <strong>Items</strong>
 
-<pre style={{ whiteSpace: "pre-wrap" }}>
-  {JSON.stringify(o.items, null, 2)}
-</pre>
-                        <br />
-                        <strong>Deliver to:</strong> {o.shippingAddress?.fullName}, {o.shippingAddress?.addressLine},{" "}
-                        {o.shippingAddress?.city} - {o.shippingAddress?.pincode} (Ph: {o.shippingAddress?.phone})
-                      </td>
-                    </tr>
-                  )}
+      <div style={{ marginTop: 12 }}>
+        {o.items.map((item) => (
+          <div
+            key={item._id}
+            style={{
+              padding: "10px 0",
+              borderBottom: "1px solid rgba(0,0,0,0.08)",
+            }}
+          >
+            <div>
+              <strong>{item.name}</strong> × {item.quantity}
+            </div>
+
+            <div style={{ color: "var(--ink-soft)", fontSize: 14 }}>
+              ₹{item.price} each
+            </div>
+
+            {item.customization && (
+              <div
+                style={{
+                  marginTop: 6,
+                  padding: "8px 10px",
+                  background: "#fff8dc",
+                  borderLeft: "4px solid #f59e0b",
+                  borderRadius: "6px",
+                }}
+              >
+                <strong>Customization:</strong> {item.customization}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginTop: 16 }}>
+        <strong>Deliver to</strong>
+        <br />
+        {o.shippingAddress?.fullName}
+        <br />
+        {o.shippingAddress?.addressLine}
+        <br />
+        {o.shippingAddress?.city} - {o.shippingAddress?.pincode}
+        <br />
+        Phone: {o.shippingAddress?.phone}
+      </div>
+    </td>
+  </tr>
+)}
                 </Fragment>
               ))}
             </tbody>
