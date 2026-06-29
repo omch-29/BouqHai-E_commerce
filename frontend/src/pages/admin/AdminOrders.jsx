@@ -96,7 +96,10 @@ const AdminOrders = () => {
                   {expanded === o._id && (
                     <tr>
                       <td colSpan={6} style={{ background: "var(--paper-deep)" }}>
-                        <strong>Items:</strong> {o.items.map((i) => `${i.name} × ${i.quantity}`).join(", ")}
+                        <strong>Items:</strong>{" "}
+                        {o.items
+                          .map((i) => `${i.name} × ${i.quantity}${i.customization ? ` (note: "${i.customization}")` : ""}`)
+                          .join(", ")}
                         <br />
                         <strong>Deliver to:</strong> {o.shippingAddress?.fullName}, {o.shippingAddress?.addressLine},{" "}
                         {o.shippingAddress?.city} - {o.shippingAddress?.pincode} (Ph: {o.shippingAddress?.phone})

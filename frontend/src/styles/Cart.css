@@ -16,9 +16,18 @@
 }
 .cart-item {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+.cart-item-row {
+  display: flex;
   align-items: center;
   gap: 16px;
-  padding: 14px;
+}
+.cart-customize-input {
+  font-size: 13px;
+  resize: vertical;
 }
 .cart-item img {
   width: 84px;

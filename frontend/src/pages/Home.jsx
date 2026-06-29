@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import "../styles/Home.css";
 
-const CATEGORIES = ["All", "Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding"];
+const CATEGORIES = ["All", "Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding", "Chocolates"];
 
 const Home = () => {
   const [params] = useSearchParams();

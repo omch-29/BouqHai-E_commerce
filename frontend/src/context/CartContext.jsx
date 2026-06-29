@@ -34,6 +34,7 @@ export const CartProvider = ({ children }) => {
           price: product.price,
           stock: product.stock,
           quantity,
+          customization: "",
         },
       ];
     });
@@ -43,6 +44,10 @@ export const CartProvider = ({ children }) => {
   const updateQuantity = (productId, quantity) => {
     if (quantity < 1) return;
     setCart((prev) => prev.map((i) => (i.productId === productId ? { ...i, quantity } : i)));
+  };
+
+  const updateCustomization = (productId, customization) => {
+    setCart((prev) => prev.map((i) => (i.productId === productId ? { ...i, customization } : i)));
   };
 
   const removeFromCart = (productId) => {
@@ -56,7 +61,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, updateQuantity, removeFromCart, clearCart, cartTotal, cartCount }}
+      value={{ cart, addToCart, updateQuantity, updateCustomization, removeFromCart, clearCart, cartTotal, cartCount }}
     >
       {children}
     </CartContext.Provider>

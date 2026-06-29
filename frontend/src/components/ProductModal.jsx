@@ -33,6 +33,7 @@ const ProductModal = ({ product, onClose }) => {
           <p className="modal-stock">
             {product.stock > 0 ? `${product.stock} ready to make` : "Currently sold out"}
           </p>
+          {product.stock > 0 && <p className="modal-customize-hint">💬 You can add customization at checkout</p>}
 
           {product.stock > 0 && (
             <>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../../api/axios";
 
-const CATEGORIES = ["Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding"];
+const CATEGORIES = ["Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding", "Chocolates"];
 
 const ProductFormModal = ({ product, onClose, onSaved }) => {
   const isEdit = Boolean(product);

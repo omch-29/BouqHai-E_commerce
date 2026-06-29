@@ -59,6 +59,7 @@ const OrderDetail = () => {
               <div>
                 <p className="detail-item-name">{item.name}</p>
                 <p className="order-date">Qty {item.quantity} × ₹{item.price}</p>
+              {item.customization && <p className="item-customization">💬 {item.customization}</p>}
               </div>
               <p className="order-amount">₹{item.price * item.quantity}</p>
             </div>

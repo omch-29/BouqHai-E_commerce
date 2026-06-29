@@ -24,7 +24,11 @@ const Checkout = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const items = cart.map((i) => ({ productId: i.productId, quantity: i.quantity }));
+      const items = cart.map((i) => ({
+        productId: i.productId,
+        quantity: i.quantity,
+        customization: i.customization || "",
+      }));
       const { data } = await api.post("/api/orders", { items, shippingAddress: form });
       setPlacedOrder(data);
       clearCart();
