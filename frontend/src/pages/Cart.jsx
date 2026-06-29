@@ -6,7 +6,7 @@ import { getImageUrl } from "../utils/image";
 
 
 const Cart = () => {
-  const { cart, updateQuantity, removeFromCart, cartTotal } = useCart();
+  const { cart, updateQuantity, updateCustomization,removeFromCart, cartTotal } = useCart();
   const navigate = useNavigate();
 
   return (
@@ -27,30 +27,85 @@ const Cart = () => {
           <div className="cart-layout">
             <div className="cart-items">
               {cart.map((item) => (
+                // <div className="cart-item card" key={item.productId}>
+                //   <img src={getImageUrl(item.image)} alt={item.name} />
+                //   <div className="cart-item-info">
+                //     <h4>{item.name}</h4>
+                //     <p className="eyebrow" style={{ color: "var(--ink-soft)", letterSpacing: 0 }}>
+                //       ₹{item.price} each
+                //     </p>
+                //     <div className="qty-stepper">
+                //       <button onClick={() => updateQuantity(item.productId, item.quantity - 1)}>−</button>
+                //       <span>{item.quantity}</span>
+                //       <button
+                //         onClick={() => updateQuantity(item.productId, Math.min(item.stock, item.quantity + 1))}
+                //       >
+                //         +
+                //       </button>
+                //     </div>
+                //   </div>
+                //   <div className="cart-item-right">
+                //     <p className="cart-item-price">₹{item.price * item.quantity}</p>
+                //     <button className="btn-ghost" onClick={() => removeFromCart(item.productId)}>
+                //       Remove
+                //     </button>
+                //   </div>
+                // </div>
                 <div className="cart-item card" key={item.productId}>
-                  <img src={getImageUrl(item.image)} alt={item.name} />
-                  <div className="cart-item-info">
-                    <h4>{item.name}</h4>
-                    <p className="eyebrow" style={{ color: "var(--ink-soft)", letterSpacing: 0 }}>
-                      ₹{item.price} each
-                    </p>
-                    <div className="qty-stepper">
-                      <button onClick={() => updateQuantity(item.productId, item.quantity - 1)}>−</button>
-                      <span>{item.quantity}</span>
-                      <button
-                        onClick={() => updateQuantity(item.productId, Math.min(item.stock, item.quantity + 1))}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="cart-item-right">
-                    <p className="cart-item-price">₹{item.price * item.quantity}</p>
-                    <button className="btn-ghost" onClick={() => removeFromCart(item.productId)}>
-                      Remove
-                    </button>
-                  </div>
-                </div>
+  <div className="cart-item-row">
+    <img src={getImageUrl(item.image)} alt={item.name} />
+
+    <div className="cart-item-info">
+      <h4>{item.name}</h4>
+
+      <p
+        className="eyebrow"
+        style={{ color: "var(--ink-soft)", letterSpacing: 0 }}
+      >
+        ₹{item.price} each
+      </p>
+
+      <div className="qty-stepper">
+        <button onClick={() => updateQuantity(item.productId, item.quantity - 1)}>
+          −
+        </button>
+
+        <span>{item.quantity}</span>
+
+        <button
+          onClick={() =>
+            updateQuantity(item.productId, Math.min(item.stock, item.quantity + 1))
+          }
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div className="cart-item-right">
+      <p className="cart-item-price">
+        ₹{item.price * item.quantity}
+      </p>
+
+      <button
+        className="btn-ghost"
+        onClick={() => removeFromCart(item.productId)}
+      >
+        Remove
+      </button>
+    </div>
+  </div>
+
+  <textarea
+    className="textarea cart-customize-input"
+    rows={3}
+    placeholder="Customization note (optional)..."
+    value={item.customization || ""}
+    onChange={(e) =>
+      updateCustomization(item.productId, e.target.value)
+    }
+  />
+</div>
               ))}
             </div>
 

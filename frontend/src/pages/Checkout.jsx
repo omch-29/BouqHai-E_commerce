@@ -53,7 +53,7 @@ const Checkout = () => {
             <h2>Order placed — {placedOrder.orderCode}</h2>
             <p>
               One last step: pay <strong>₹{placedOrder.totalAmount}</strong> and send us the payment screenshot
-              on WhatsApp, mentioning order <strong>{placedOrder.orderCode}</strong>. We'll confirm your order
+              on 9022033970 @WhatsApp, mentioning order <strong>{placedOrder.orderCode}</strong>. We'll confirm your order
               as soon as we verify it.
             </p>
             <a href={waLink} target="_blank" rel="noreferrer" className="btn btn-primary whatsapp-btn">
