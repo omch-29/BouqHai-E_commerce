@@ -7,7 +7,11 @@ const getProducts = async (req, res) => {
     const query = { isActive: true };
     if (category && category !== "All") query.category = category;
     if (newOnly === "true") query.isNewCollection = true;
-    if (search) query.$text = { $search: search };
+    if (search) {
+      const safe = search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); // escape regex special chars
+      const regex = new RegExp(safe, "i"); // case-insensitive, partial match
+      query.$or = [{ name: regex }, { description: regex }, { category: regex }];
+    }
 
     const products = await Product.find(query).sort({ createdAt: -1 });
     res.json(products);

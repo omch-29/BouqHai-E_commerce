@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema(
     image: { type: String, required: true }, // stored path e.g. /uploads/xyz.jpg
     category: {
       type: String,
-      enum: ["Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding"],
+      enum: ["Birthday", "Anniversary", "Romance", "Congratulations", "Sympathy", "Everyday", "Wedding", "Chocolates"],
       default: "Everyday",
     },
     stock: { type: Number, default: 10, min: 0 },

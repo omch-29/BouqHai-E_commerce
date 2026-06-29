@@ -32,6 +32,7 @@ const placeOrder = async (req, res) => {
         image: product.image,
         price: product.price,
         quantity: item.quantity,
+        customization: (item.customization || "").trim().slice(0, 300), // cap length, basic sanitation
       });
     }
 
