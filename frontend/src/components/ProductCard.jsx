@@ -16,7 +16,7 @@ const ProductCard = ({ product, onOpen }) => {
       </div>
       <div className="product-info">
         <h3>{product.name}</h3>
-        {product.category1=="Romance" && 
+        {product.category !=="Romance" && 
         <span className="eyebrow">{product.category}</span>}
       </div>
     </button>
