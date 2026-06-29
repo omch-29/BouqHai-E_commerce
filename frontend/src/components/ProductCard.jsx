@@ -3,6 +3,7 @@ import { getImageUrl } from "../utils/image";
 
 
 const ProductCard = ({ product, onOpen }) => {
+  //  console.log(product.category);
   return (
     <button className="product-card" onClick={() => onOpen(product)}>
       <div className="product-image-wrap">
@@ -16,9 +17,15 @@ const ProductCard = ({ product, onOpen }) => {
       </div>
       <div className="product-info">
         <h3>{product.name}</h3>
-        <span className="eyebrow">{product.category}</span>
+        {/* <span className="eyebrow">{product.category}</span> */}
+        {product.category !== "Romance" &&
+ product.category !== "Sympathy" && (
+  <span className="eyebrow">{product.category}</span>
+  
+)}
       </div>
     </button>
+    
   );
 };
 
