@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 
-// Verifies any valid token and attaches payload to req.auth
 const requireAuth = (req, res, next) => {
   const header = req.headers.authorization;
   if (!header || !header.startsWith("Bearer ")) {
