@@ -104,7 +104,7 @@ const updateOrderStatus = async (req, res) => {
     const order = await Order.findById(req.params.id);
     if (!order) return res.status(404).json({ message: "Order not found." });
 
-    // Reduce stock only the first time an order is confirmed
+    
     if (status === "Confirmed" && order.status !== "Confirmed") {
       for (const item of order.items) {
         await Product.findByIdAndUpdate(item.product, { $inc: { stock: -item.quantity } });
