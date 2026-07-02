@@ -6,7 +6,7 @@ const orderItemSchema = new mongoose.Schema({
   image: String,
   price: Number,
   quantity: { type: Number, default: 1 },
-  customization: { type: String, default: "" }, // optional note from customer, e.g. "add a card saying..."
+  customization: { type: String, default: "" }, // optional
 });
 
 const orderSchema = new mongoose.Schema(
