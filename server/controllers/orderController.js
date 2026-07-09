@@ -66,7 +66,7 @@ const getMyOrders = async (req, res) => {
   }
 };
 
-// GET /api/orders/:id (customer - own order only, or admin)
+// GET /api/order
 const getOrderById = async (req, res) => {
   try {
     const order = await Order.findById(req.params.id);
