@@ -17,7 +17,7 @@ router.get("/my", requireAuth, getMyOrders);
 router.get("/", requireAuth, requireAdmin, getAllOrders);
 router.put("/:id/status", requireAuth, requireAdmin, updateOrderStatus);
 
-// Shared (customer sees own order, admin sees any) - declared after /my and / so it doesn't clash
+// Shared
 router.get("/:id", requireAuth, getOrderById);
 
 module.exports = router;
