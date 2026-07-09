@@ -17,7 +17,6 @@ router.get("/my", requireAuth, getMyOrders);
 router.get("/", requireAuth, requireAdmin, getAllOrders);
 router.put("/:id/status", requireAuth, requireAdmin, updateOrderStatus);
 
-// Shared
 router.get("/:id", requireAuth, getOrderById);
 
 module.exports = router;
