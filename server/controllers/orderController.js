@@ -56,7 +56,6 @@ const placeOrder = async (req, res) => {
   }
 };
 
-// GET 
 const getMyOrders = async (req, res) => {
   try {
     const orders = await Order.find({ user: req.auth.id }).sort({ createdAt: -1 });
