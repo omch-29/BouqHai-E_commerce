@@ -14,7 +14,7 @@ const placeOrder = async (req, res) => {
       return res.status(400).json({ message: "Your cart is empty." });
     }
 
-    // Re-fetch product details server-side
+    // Re-fetch 
     let totalAmount = 0;
     const orderItems = [];
     for (const item of items) {
