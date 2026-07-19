@@ -37,7 +37,7 @@ const placeOrder = async (req, res) => {
     }
 
     let orderCode = generateOrderCode();
-    // ensure uniqueness (extremely unlikely to collide, but be safe)
+    // ensure uniqueness
     while (await Order.findOne({ orderCode })) orderCode = generateOrderCode();
 
     const order = await Order.create({
