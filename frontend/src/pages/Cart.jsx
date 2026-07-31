@@ -34,9 +34,7 @@ const Cart = () => {
                 //     <p className="eyebrow" style={{ color: "var(--ink-soft)", letterSpacing: 0 }}>
                 //       ₹{item.price} each
                 //     </p>
-                //     <div className="qty-stepper">
-                //       <button onClick={() => updateQuantity(item.productId, item.quantity - 1)}>−</button>
-                //       <span>{item.quantity}</span>
+                //     
                 //       <button
                 //         onClick={() => updateQuantity(item.productId, Math.min(item.stock, item.quantity + 1))}
                 //       >
