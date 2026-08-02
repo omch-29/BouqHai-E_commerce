@@ -34,9 +34,7 @@ const Cart = () => {
                 //     
                 //     </p>
                 //     
-                //       <button
-                //         onClick={() => updateQuantity(item.productId, Math.min(item.stock, item.quantity + 1))}
-                //       >
+                //      
                 //         +
                 //       </button>
                 //     </div>
