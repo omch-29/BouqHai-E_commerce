@@ -31,8 +31,7 @@ const Cart = () => {
                 //   <img src={getImageUrl(item.image)} alt={item.name} />
                 //   <div className="cart-item-info">
                 //     <h4>{item.name}</h4>
-                //     <p className="eyebrow" style={{ color: "var(--ink-soft)", letterSpacing: 0 }}>
-                //       ₹{item.price} each
+                //     
                 //     </p>
                 //     
                 //       <button
