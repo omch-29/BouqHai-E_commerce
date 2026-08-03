@@ -35,8 +35,6 @@ const Cart = () => {
                 //     </p>
                 //     
                 //      
-                //         +
-                //       </button>
                 //     </div>
                 //   </div>
                 //   <div className="cart-item-right">
