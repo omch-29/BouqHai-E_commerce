@@ -30,7 +30,7 @@ const Cart = () => {
                 // <div className="cart-item card" key={item.productId}>
                 //   <img src={getImageUrl(item.image)} alt={item.name} />
                 //   <div className="cart-item-info">
-                //     <h4>{item.name}</h4>
+               
                 //    
                 //   </div>
                 //   <div className="cart-item-right">
