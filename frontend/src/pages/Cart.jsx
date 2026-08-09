@@ -35,7 +35,7 @@ const Cart = () => {
                 //   </div>
                 //   <div className="cart-item-right">
                 //     <p className="cart-item-price">₹{item.price * item.quantity}</p>
-                //     <button className="btn-ghost" onClick={() => removeFromCart(item.productId)}>
+                //    
                 //       Remove
                 //     </button>
                 //   </div>
