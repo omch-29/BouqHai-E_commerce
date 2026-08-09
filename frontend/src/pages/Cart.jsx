@@ -31,8 +31,6 @@ const Cart = () => {
                 //   <img src={getImageUrl(item.image)} alt={item.name} />
                 //   <div className="cart-item-info">
                
-                //    
-                //   </div>
                 //   <div className="cart-item-right">
                 //     <p className="cart-item-price">₹{item.price * item.quantity}</p>
                 //    
