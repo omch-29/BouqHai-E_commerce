@@ -34,7 +34,7 @@ const Cart = () => {
                 //   <div className="cart-item-right">
                 //     <p className="cart-item-price">₹{item.price * item.quantity}</p>
                 //    
-                //       Remove
+                
                 //     </button>
                 //   </div>
                 // </div>
