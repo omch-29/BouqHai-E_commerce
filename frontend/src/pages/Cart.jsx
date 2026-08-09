@@ -32,9 +32,8 @@ const Cart = () => {
                 //   <div className="cart-item-info">
                
                 //   <div className="cart-item-right">
-                //     <p className="cart-item-price">₹{item.price * item.quantity}</p>
                 //    
-                                //   </div>
+        
                 // </div>
                 <div className="cart-item card" key={item.productId}>
   <div className="cart-item-row">
