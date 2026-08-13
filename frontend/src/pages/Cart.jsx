@@ -32,7 +32,7 @@ const Cart = () => {
                 //   <div className="cart-item-info">
                
                 //   <div className="cart-item-right">
-                //    
+            
         
                 // </div>
                 <div className="cart-item card" key={item.productId}>
