@@ -31,7 +31,6 @@ const Cart = () => {
                 //   <img src={getImageUrl(item.image)} alt={item.name} />
                 //   <div className=
             
-        
                 // </div>
                 <div className="cart-item card" key={item.productId}>
   <div className="cart-item-row">
