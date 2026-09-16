@@ -157,4 +157,4 @@ const Checkout = () => {
 export default Checkout;
 
 
-//checkout.js page
+//checkout
