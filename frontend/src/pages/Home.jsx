@@ -73,7 +73,7 @@ const Home = () => {
             </button>
           ))}
         </div>
-{/* loading */}
+{/* loading => async*/}
         {loading ? (
           <p className="empty-state">Gathering fresh items…</p>
         ) : products.length === 0 ? (
