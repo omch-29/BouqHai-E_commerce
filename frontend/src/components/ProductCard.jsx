@@ -3,7 +3,7 @@ import { getImageUrl } from "../utils/image";
 
 
 const ProductCard = ({ product, onOpen }) => {
-  //  console.log(product.category);
+  
   return (
     <button className="product-card" onClick={() => onOpen(product)}>
       <div className="product-image-wrap">
