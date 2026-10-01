@@ -59,4 +59,4 @@ const Navbar = ({ search, setSearch }) => {
 };
 
 export default Navbar;
-//Nav
+//Navbar
