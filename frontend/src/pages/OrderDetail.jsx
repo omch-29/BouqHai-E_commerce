@@ -50,7 +50,7 @@ const OrderDetail = () => {
             ))}
           </div>
         )}
-
+{/* loading */}
         <div className="card order-detail-items">
           <h3>Items</h3>
           {order.items.map((item, idx) => (
